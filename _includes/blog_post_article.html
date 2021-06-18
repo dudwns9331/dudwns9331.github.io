@@ -5,7 +5,11 @@
     <p class="post-summary">
       Posted by : {% if page.author %}
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name"><a href="{{site.url}}{{site.baseurl}}/blog/authors/{{page.author}}">{{ page.author }}</a></span> </span
+        <span itemprop="name"
+          ><a href="{{site.url}}{{site.baseurl}}/blog/authors/{{page.author}}"
+            >{{ page.author }}</a
+          ></span
+        > </span
       >{% endif %} at
       <time datetime="{{ page.date }}" itemprop="datePublished"
         >{{ page.date | date: "%b %-d, %Y" }}</time
@@ -38,19 +42,11 @@
     <br />
     {%- include share_page.html -%}
     <!-- Author box -->
-    {% assign author = site.data.authors[page.author] %}
-      {% if author %}
-      {% include author.html %}
-    {% endif %}
+    {% assign author = site.data.authors[page.author] %} {% if author %} {%
+    include author.html %} {% endif %}
   </div>
   {%- if site.hyvor_talk_website_id -%}
-  <div class="comments">
-    {%- include hyvor_comments.html -%}
-   </div>
-    {%- endif -%}
-  <!-- Incomment incase you want to use Disqus
-      <div id="disqus_thread"></div>
-   -->
-
-
+  <div class="comments">{%- include hyvor_comments.html -%}</div>
+  {%- endif -%}
+  <div id="disqus_thread"></div>
 </article>

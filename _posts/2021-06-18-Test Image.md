@@ -1,0 +1,16 @@
+---
+layout: post
+title: "안녕하세요 !"
+summary: This is a sample post!
+author: yeongjun
+date: "2021-06-18 13:02:00 +0900"
+category: jekyll
+thumbnail: /assets/img/posts/code.jpg
+comments: true
+---
+
+# 테스트입니다.
+
+## 테스트임
+
+### 테스트

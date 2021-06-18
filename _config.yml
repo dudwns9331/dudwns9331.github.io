@@ -24,7 +24,7 @@ urls:
 # Edit Author details (For multi authors check _data/authors.yml)
 
 author_logo: profile.png
-author: Yeong Jun
+author: yeongjun
 author_bio: 강원대학교 컴퓨터공학과 컴퓨터과학전공 R.O.T.C 60th 127 학군단, 프론트엔드 개발 준비중 :D
 author_email: "dudwns1045@naver.com"
 author_location: Korea
@@ -89,7 +89,7 @@ hyvor_talk_website_id: 476
 # wakatime_username: sujaykundu777
 
 # mailchimp embedded form url (newsletter):
-mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
+# mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
 
 # contact form - (choose formspress or getform)
 getform_endpoint: 83b703c3-9e47-4df4-ac55-e24d7eb02abc

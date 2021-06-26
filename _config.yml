@@ -147,6 +147,15 @@ defaults:
     values:
       layout: author
       permalink: /blog/authors/:slug
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      summary: ""
+      author: "yeongjun"
+      category: ""
+      thumbnail: ""
 
 # Build settings
 plugins:

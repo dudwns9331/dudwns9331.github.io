@@ -6,7 +6,6 @@ $nav-typeface: "Gill sans";
 $mono-typeface: Menlo, Monaco, monospace;
 $text-width: 650px;
 
-html,
 html[data-theme="dark"] {
   --bold-color: rgb(188, 188, 188);
   --box-background-color: hsl(0, 0%, 20%);
@@ -25,6 +24,7 @@ html[data-theme="dark"] {
   --button-background-color: #111;
 }
 
+html,
 html[data-theme="light"] {
   --bold-color: rgb(0, 0, 0);
   --box-background-color: rgb(249, 249, 250);

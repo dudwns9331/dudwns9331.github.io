@@ -68,7 +68,7 @@ html[data-theme="light"] {
     --button-background-color: #111;
   }
 
-  // /* Light Mode */
+  /* Light Mode */
   html[data-theme="light"] {
     --bold-color: rgb(0, 0, 0);
     --box-background-color: rgb(249, 249, 250);
@@ -590,15 +590,14 @@ header {
 }
 
 .jumbotron-heading {
-  color: #ffffff;
-  font-size: 60px;
-  font-weight: 700;
+  color: #111;
+  font-size: 35px;
 }
 
 .lead {
   font-size: 1.3rem !important;
   font-weight: 600;
-  color: #ffffff !important;
+  color: #111 !important;
 }
 
 .fa {

@@ -5,7 +5,6 @@ layout: page
 permalink: /styleguide/
 ---
 
-
 ### devlopr - Styleguide
 
 <hr />
@@ -13,7 +12,6 @@ permalink: /styleguide/
  <img src="/assets/img/styleguide.png" class="img-fluid">
 
 <p> Lets try the different text styles  <b> Bold </b> , <strong> Strong </strong>, <em> Emphasis </em>, <i> Italic </i> </p>
-
 
 <p> Now, lets try different heading styles : </p>
 
@@ -133,7 +131,6 @@ permalink: /styleguide/
 
 <hr />
 
-
 <h3>YouTube Responsive Embed</h3>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bBpKMH3nBzE?rel=0&amp;controls=0&amp;showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -204,5 +201,3 @@ permalink: /styleguide/
 <p><input type="text" placeholder="I'm an input field!" /></p>
 
 <hr />
-
-

@@ -23,7 +23,7 @@ urls:
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: profile.png
+author_logo: yeongjun_profile.png
 author: yeongjun
 author_bio: 강원대학교 컴퓨터공학과 컴퓨터과학전공 R.O.T.C 60th 127 학군단, 프론트엔드 개발 준비중 :D
 author_email: "dudwns1045@naver.com"
@@ -38,13 +38,13 @@ author_work_experiences:
     company_url: https://google.com
     designation: Software Engineer
     description: Worked on various Google Products
-    visibility: true
+    visibility: false
   - company_name: Microsoft
     company_logo: microsoft.png
     company_url: https://microsoft.com
     designation: Azure Developer
     description: Worked on various Azure Cloud Products
-    visibility: true
+    visibility: false
 
 # Education
 author_education_details:
@@ -53,7 +53,7 @@ author_education_details:
     college_url: https://mit.org
     college_degree: CS Engineer
     description: Bachelor of Technology
-    visibility: true
+    visibility: false
 
 # Projects
 author_project_details:

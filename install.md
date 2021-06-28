@@ -15,14 +15,13 @@ If you aren’t familiar with Jekyll yet, you should know that it is a static si
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cXBEfpn0qrg?rel=0&amp;controls=0&amp;showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
 ### Steps to create your blog using devlopr-jekyll and Host using Github Pages :
 
->  **Step 1.**  Fork the repo - [click here](https://github.com/sujaykundu777/devlopr-jekyll/fork)
+> **Step 1.** Fork the repo - [click here](https://github.com/sujaykundu777/devlopr-jekyll/fork)
 
 ![Devlopr Jekyll Repo](/assets/img/posts/fork1.png){:class="img-fluid"}
 
-> **Step 2.** Use **your-github-username.github.io** as the new repo  ( Replace your-github-username with yours). Remember if you use the name other than your-github-username.github.io , your blog will be built using gh-pages branch.
+> **Step 2.** Use **your-github-username.github.io** as the new repo ( Replace your-github-username with yours). Remember if you use the name other than your-github-username.github.io , your blog will be built using gh-pages branch.
 
 ![Devlopr Jekyll Repo](/assets/img/posts/fork2.png){:class="img-fluid"}
 
@@ -42,12 +41,12 @@ If you aren’t familiar with Jekyll yet, you should know that it is a static si
  $ code .
 ```
 
-> **Step 4.** Open the files using VSCode and edit _config.yml and edit with your details:
+> **Step 4.** Open the files using VSCode and edit \_config.yml and edit with your details:
 
-- _config.yml file - replace with your own details
-- _posts - Add your blog posts here
-- _includes - You can replace the contents of the files with your data. (contains widgets)
-- _assets/img - Add all your images here
+- \_config.yml file - replace with your own details
+- \_posts - Add your blog posts here
+- \_includes - You can replace the contents of the files with your data. (contains widgets)
+- \_assets/img - Add all your images here
 
 ![Devlopr Jekyll Repo](/assets/img/posts/fork34.png){:class="img-fluid"}
 
@@ -67,6 +66,7 @@ For ruby :
 $ ruby -v
 ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux-gnu]
 ```
+
 For bundler :
 
 ```bash
@@ -74,12 +74,14 @@ $ gem install bundler
 $ bundler -v
 Bundler version 2.2.6
 ```
+
 Add jekyll :
 
 ```bash
 $ bundle add jekyll
 ```
- This command will add the Jekyll gem to our Gemfile and install it to the ./vendor/bundle/ folder.
+
+This command will add the Jekyll gem to our Gemfile and install it to the ./vendor/bundle/ folder.
 
 You can check the jekyll version
 
@@ -100,6 +102,7 @@ $ bundle install
 ```bash
 $ bundle exec jekyll serve --watch
 ```
+
 or you can also serve using :
 
 ```bash
@@ -114,7 +117,7 @@ Visit [http://localhost:4000](http://localhost:4000) for development server
 
 ### Adding Content
 
-Start populating your blog by adding your .md files in _posts. devlopr-jekyll already has a few examples.
+Start populating your blog by adding your .md files in \_posts. devlopr-jekyll already has a few examples.
 
 #### YAML Post Example:
 
@@ -123,15 +126,13 @@ Start populating your blog by adding your .md files in _posts. devlopr-jekyll al
 layout: post
 title: Sample Post
 author: Sujay Kundu
-date: '2019-05-21 14:35:23 +0530'
+date: "2019-05-21 14:35:23 +0530"
 category:
-        - jekyll
+  - jekyll
 summary: This is the summary for the sample post
 thumbnail: sample.png
 ---
-
 Hi ! This is sample post.
-
 ```
 
 #### YAML Page Example:
@@ -143,7 +144,6 @@ title: Sample Page
 menus: header
 permalink: /sample-page/
 ---
-
 Hi ! This is sample page.
 ```
 
@@ -174,4 +174,3 @@ Visit your Github Repo settings ! Enable master branch as Github Pages Branch :
 > Congrats ! On your new shining Blog !
 
 You can visit the blog using [http://your-github-username.github.io](http://your-github-username.github.io).
-

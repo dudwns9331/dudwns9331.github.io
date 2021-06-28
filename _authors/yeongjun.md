@@ -2,7 +2,7 @@
   name: YeongJun
   username: yeongjun
   site: http://gitbub.com/dudwns9331
-  avatar: yeongjun_profile
+  avatar: yeongjun
   bio: "Hi I am YeongJun, a Web Developer and Designer."
   email: dudwns1045@naver.com
   social:

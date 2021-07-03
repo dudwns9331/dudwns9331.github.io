@@ -3,8 +3,8 @@ subtitle: 준로그 since 2021.06
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
 
-url: "https://dudwns9331.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
-baseurl: "" # the subpath of your site, e.g. /blog
+url: 'https://dudwns9331.github.io' # the base hostname & protocol for your site, e.g. https://example.github.io
+baseurl: '' # the subpath of your site, e.g. /blog
 
 # Navigation
 urls:
@@ -26,9 +26,9 @@ urls:
 author_logo: profile.png
 author: yeongjun
 author_bio: 강원대학교 컴퓨터공학과 컴퓨터과학전공 R.O.T.C 60th 127 학군단, 프론트엔드 개발 준비중 :D
-author_email: "dudwns1045@naver.com"
+author_email: 'dudwns1045@naver.com'
 author_location: Korea
-author_website_url: "https://github.com/dudwns9331"
+author_website_url: 'https://github.com/dudwns9331'
 typewrite-text: 현재 블로그 바꾸는 중!
 
 # Experiences
@@ -38,13 +38,13 @@ author_work_experiences:
     company_url: https://google.com
     designation: Software Engineer
     description: Worked on various Google Products
-    visibility: false
+    visibility: true
   - company_name: Microsoft
     company_logo: microsoft.png
     company_url: https://microsoft.com
     designation: Azure Developer
     description: Worked on various Azure Cloud Products
-    visibility: false
+    visibility: true
 
 # Education
 author_education_details:
@@ -53,7 +53,7 @@ author_education_details:
     college_url: https://mit.org
     college_degree: CS Engineer
     description: Bachelor of Technology
-    visibility: false
+    visibility: true
 
 # Projects
 author_project_details:
@@ -93,7 +93,7 @@ hyvor_talk_website_id: 476
 
 # contact form - (choose formspress or getform)
 getform_endpoint: 83b703c3-9e47-4df4-ac55-e24d7eb02abc
-formspree_email: johndoe@gmail.com
+formspree_email: dudwns1045@naver.com
 
 # releases - widget can be (sidebar, modal or embed)
 olvy_organization: devlopr
@@ -112,7 +112,7 @@ show_author_project_details: false
 # pagination of posts
 paginate: 4
 per_page: 4
-paginate_path: "/blog/page/:num/"
+paginate_path: '/blog/page/:num/'
 
 # minify
 # compress_html:
@@ -138,24 +138,24 @@ collections:
 
 defaults:
   - scope:
-      path: "gallery"
+      path: 'gallery'
     values:
       permalink: /:path/:basename:output_ext
   - scope:
-      path: ""
+      path: ''
       type: authors
     values:
       layout: author
       permalink: /blog/authors/:slug
   - scope:
-      path: ""
-      type: "posts"
+      path: ''
+      type: 'posts'
     values:
-      layout: "post"
-      summary: ""
-      author: "yeongjun"
-      category: ""
-      thumbnail: ""
+      layout: 'post'
+      summary: ''
+      author: 'yeongjun'
+      category: ''
+      thumbnail: ''
 
 # Build settings
 plugins:
@@ -174,7 +174,7 @@ jekyll_admin:
   #   - staticfiles
   #   - datafiles
   #   - configuration
-  homepage: "posts"
+  homepage: 'posts'
 
 # Exclude from processing.
 # The following items will not be processed, by default.

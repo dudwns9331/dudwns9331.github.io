@@ -4,8 +4,8 @@ layout: full-width
 
 <script>
   $(document).ready(function () {
-    $("#typewriteText").typewrite({
-      actions: [{ type: "{{site.typewrite-text}}" }],
+    $('#typewriteText').typewrite({
+      actions: [{ type: '{{site.typewrite-text}}' }],
     });
   });
 </script>
@@ -13,7 +13,7 @@ layout: full-width
   class="jumbotron"
   style="
     text-align: center;
-    background-image: url(/assets/img/bg_sky.png);
+    background-image: url(/assets/img/bg_sky2.jpg);
     background-size: cover;
   "
 >
@@ -23,7 +23,7 @@ layout: full-width
   />
   <p class="jumbotron-heading">Hi, I am {{site.author}} !</p>
   <p class="lead" id="typewriteText"></p>
-  <!-- {%- include github_star_button.html -%} {%- include github_fork_button.html-%} -->
+  {%- include github_star_button.html -%} {%- include github_fork_button.html-%}
 </div>
 <div class="col-lg-8 offset-md-2">
   <section id="recent-articles">

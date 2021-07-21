@@ -1,0 +1,363 @@
+<!DOCTYPE html> <html lang=" en "><head> <meta charset="utf-8" /> <title> 9장 컴포넌트 스타일링 -ZeroJun's Blog </title> <meta http-equip="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <meta name="description" content="리액트를 다루는 기술 - velopert- 9장 컴포넌트 스타일링"> <meta name="keywords" content="9장 컴포넌트 스타일링, ZeroJun's Blog, React,"/> <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" /> <meta content="" property="fb:app_id" /> <meta content="ZeroJun's Blog" property="og:site_name" /> <meta content="9장 컴포넌트 스타일링" property="og:title" /> <meta content="article" property="og:type" /> <meta content="리액트를 다루는 기술 - velopert" property="og:description" /> <meta content="https://dudwns9331.github.io/react/2021/07/03/react9/" property="og:url" /> <meta content="2021-07-03T18:20:24+00:00" property="article:published_time" /> <meta content="https://dudwns9331.github.io/about/" property="article:author" /> <meta content="https://dudwns9331.github.io/assets/img/posts/book.jpg" property="og:image" /> <meta content="React" property="article:section" /> <!-- Twitter Cards --> <meta name="twitter:card" content="summary" /> <meta name="twitter:site" content="@" /> <meta name="twitter:creator" content="@" /> <meta name="twitter:title" content="9장 컴포넌트 스타일링" /> <meta name="twitter:url" content="https://dudwns9331.github.io/react/2021/07/03/react9/" /> <meta name="twitter:description" content="리액트를 다루는 기술 - velopert" /> <link rel="stylesheet" href="https://dudwns9331.github.io/assets/css/main.css" /> <!-- <link rel="stylesheet" href="https://dudwns9331.github.io/assets/css/custom-style.css" /> --> <link rel="stylesheet" href="https://dudwns9331.github.io/assets/bower_components/lightgallery/dist/css/lightgallery.min.css" /> <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.css" /> <link rel="stylesheet" href="https://dudwns9331.github.io/assets/bower_components/bootstrap/dist/css/bootstrap.min.css" /> <link rel="stylesheet" href="https://dudwns9331.github.io/assets/bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css" /> <link rel="stylesheet" href="https://dudwns9331.github.io/assets/bower_components/icono/dist/icono.min.css" /> <!-- Fonts--> <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet" /> <!-- Favicon --> <link rel="icon" href="https://dudwns9331.github.io/assets/img/favicon.ico" type="image/gif" sizes="16x16" /> <script> var base_url = 'https://dudwns9331.github.io' ; </script> <!-- Jquery --> <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous" ></script> <!-- <script src="https://dudwns9331.github.io/assets/bower_components/jquery/dist/jquery.min.js"></script> --> <script src="https://dudwns9331.github.io/assets/bower_components/jquery.easing/jquery.easing.min.js"></script> <script src="https://dudwns9331.github.io/assets/bower_components/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <script src="https://dudwns9331.github.io/assets/bower_components/jquery-mousewheel/jquery.mousewheel.min.js"></script> <script src="https://dudwns9331.github.io/assets/bower_components/ghosthunter/dist/jquery.ghostHunter.min.js"></script> <script src="https://dudwns9331.github.io/assets/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js"></script> <script src="https://dudwns9331.github.io/assets/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script> <script src="https://dudwns9331.github.io/assets/bower_components/nanobar/nanobar.min.js"></script> <script src="https://dudwns9331.github.io/assets/bower_components/typewrite/dist/typewrite.min.js"></script> <script src="https://dudwns9331.github.io/assets/js/search.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script> <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> <!-- for Mathjax support --> <!-- Github Button --> <script async defer src="https://buttons.github.io/buttons.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" ></script> <!-- (you can remove the below scripts but do buy me a coffee to show some support :) --> <!-- Maker widget --> <!-- <script> (function(d, h, m) { var js, fjs = d.getElementsByTagName(h)[0]; if (d.getElementById(m)) { return; } js = d.createElement(h); js.id = m; js.onload = function() { window.makerWidgetComInit({ position: "left", widget: "ofeeof264otl2l5g-zspk40eq2gaomj2n-higi2qphmveubksi" }); }; js.src = "https://makerwidget.com/js/embed.js"; fjs.parentNode.insertBefore(js, fjs); })(document, "script", "dhm"); </script> --> <!-- buy me a coffeee --> <!-- <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="sujaykundu" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F" data-position="right" data-x_margin="10" data-y_margin="10" ></script> --> <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--> <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]--> <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]--> <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--> </head> <body><nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="topNav"> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" > <span class="icono-hamburger" id="navbar-hamburger"> </span> </button> <a class="navbar-brand" href="/">ZeroJun's Blog</a> <div class="collapse navbar-collapse" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"> <a class="nav-link" href="https://dudwns9331.github.io/" >Home</a > </li> <li class="nav-item"> <a class="nav-link" href="https://dudwns9331.github.io/about" >About</a > </li> <li class="nav-item"> <a class="nav-link" href="https://dudwns9331.github.io/blog" >Blog</a > </li> </ul> </div> <ul class="nav justify-content-end"> <!-- <li class="nav-item"> <a class="nav-link" href="https://dudwns9331.github.io/get-started"> Get Started </a> </li> --> <!-- <li class="nav-item"> <a class="nav-link" id="olvy-target"> What's New </a> </li> --> <!-- <li class="nav-item"> <a class="nav-link" href="https://dudwns9331.github.io/styleguide"> Styleguide </a> </li> --> <!-- <li class="nav-item"> <button id="olvy-target" class="btn btn-dark">What's New</button> </li> --> <li class="nav-item"> <a class="nav-link toggle-search-button" href="#search"> <i class="fa fa-search search-icon" aria-hidden="true"></i> </a> </li> <!-- <li class="nav-item" style="margin-top: 5px; padding-right: 20px"> <a class="header__checkout snipcart-checkout"> <svg width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M1.10512 0.368718C0.560256 0.368718 0.118164 0.812066 0.118164 1.35848C0.118164 1.9049 0.560256 2.34824 1.10512 2.34824H4.90887L8.30138 18.4009C8.43503 19.0053 8.83085 19.5079 9.32946 19.5041H25.7788C26.3005 19.5118 26.7799 19.0375 26.7799 18.5143C26.7799 17.9911 26.3006 17.5168 25.7788 17.5245H10.1315L9.71003 15.545H27.095C27.5371 15.5412 27.9547 15.2048 28.0511 14.7718L30.354 4.87412C30.4825 4.29933 29.9852 3.67172 29.3979 3.66786H7.21171L6.6771 1.15221C6.58329 0.71276 6.15921 0.368652 5.7107 0.368652L1.10512 0.368718ZM7.623 5.64746H12.7634L13.2569 8.61674H8.25005L7.623 5.64746ZM14.7785 5.64746H20.9881L20.4946 8.61674H15.2719L14.7785 5.64746ZM23.0031 5.64746H28.1537L27.4649 8.61674H22.5097L23.0031 5.64746ZM8.67181 10.5963H13.5862L14.0797 13.5656H9.29919L8.67181 10.5963ZM15.6009 10.5963H20.1656L19.6721 13.5656H16.0944L15.6009 10.5963ZM22.1807 10.5963H27.0023L26.3135 13.5656H21.6872L22.1807 10.5963ZM12.6197 20.164C10.8141 20.164 9.32979 21.6525 9.32979 23.4632C9.32979 25.2739 10.8141 26.7624 12.6197 26.7624C14.4252 26.7624 15.9095 25.2739 15.9095 23.4632C15.9095 21.6525 14.4252 20.164 12.6197 20.164ZM22.4892 20.164C20.6837 20.164 19.1994 21.6525 19.1994 23.4632C19.1994 25.2739 20.6837 26.7624 22.4892 26.7624C24.2948 26.7624 25.7791 25.2739 25.7791 23.4632C25.7791 21.6525 24.2948 20.164 22.4892 20.164ZM12.6197 22.1435C13.3586 22.1435 13.9356 22.7222 13.9356 23.4632C13.9356 24.2042 13.3586 24.7829 12.6197 24.7829C11.8807 24.7829 11.3037 24.2042 11.3037 23.4632C11.3037 22.7222 11.8807 22.1435 12.6197 22.1435ZM22.4892 22.1435C23.2282 22.1435 23.8052 22.7222 23.8052 23.4632C23.8052 24.2042 23.2282 24.7829 22.4892 24.7829C21.7503 24.7829 21.1733 24.2042 21.1733 23.4632C21.1733 22.7222 21.7503 22.1435 22.4892 22.1435Z" fill="#ff7901" class="header__checkout-fill" ></path> </svg> <span class="snipcart-items-count"></span> <span class="snipcart-total-price"></span> </a> </li> --> <li class="nav-item"> <input class="nav-link switch" id="theme-toggle" onclick="modeSwitcher() " type="checkbox" name="checkbox" /> </li> </ul> </nav> <!-- Search Form --> <div class="search-form-container"> <form class="search-form"> <fieldset class="search-form__fieldset"> <div class="row"> <div class="col-lg-8 offset-md-2"> <input class="search-form__field" placeholder="Type to Search..." autofocus /> <input class="search-form__submit" type="submit" value="search" /> </div> </div> </fieldset> </form> <div class="row"> <div class="col-lg-8 offset-md-2 search-results"> <div class="card search-results"></div> </div> </div> <div class="close-search-button search-form-container__close"> <i class="fa fa-times icon"></i> </div> </div> <div class="container"> <div class="row justify-content-center" id="blog-post-container"> <div class="col-lg-10"><article class="card" itemscope itemtype="http://schema.org/BlogPosting"> <div class="card-header"> <h1 class="post-title" itemprop="name headline">9장 컴포넌트 스타일링</h1> <h4 class="post-meta">리액트를 다루는 기술 - velopert</h4> <p class="post-summary"> Posted by : <span itemprop="author" itemscope itemtype="http://schema.org/Person"> <span itemprop="name" ><a href="https://dudwns9331.github.io/blog/authors/yeongjun" >yeongjun</a ></span > </span > at <time datetime="2021-07-03 18:20:24 +0000" itemprop="datePublished" >Jul 3, 2021</time > </p> <span class="disqus-comment-count" data-disqus-identifier="/react/2021/07/03/react9/" ></span> <div class="post-categories"> Category : <a href="/blog/categories/React" >React</a > </div> </div> <div class="card-body" itemprop="articleBody"> <img class="card-img-top" src="https://dudwns9331.github.io/assets/img/posts/book.jpg" alt="" /> <br /> <br /> <h2 id="2021-07-03">2021-07-03</h2> <h1 id="9장-컴포넌트-스타일링">9장 컴포넌트 스타일링</h1> <p><br /></p> <p>리액트에서 컴포넌트를 스타일링할 때는 다양한 방식을 사용할 수 있다. 여러 방식 중에서 딱히 정해진 방식은 없다. 이번 장에서는 어떤 방식이 있는지 알아보고 자주 사용하는 방식을 하나씩 사용해 보도록 한다.</p> <p><br /></p> <p align="center"> <img src="/assets/img/posts/React/reactstyling.png" width="450px" height="237px" /> </p> <p><br /></p> <ul> <li> <p>일반 CSS : 컴포넌트를 스타일링하는 가장 기본적인 방식이다.</p> </li> <li> <p>Sass : 자주 사용되는 CSS 전처리기 중 하나로 확장된 CSS 문법을 사용하여 CSS 코드를 더욱 쉽게 작성할 수 있도록 한다.</p> </li> <li> <p>CSS Module : 스타일을 작성할 때 CSS 클래스가 다른 CSS 클래스의 이름과 절대 충돌하지 않도록 파일마다 고유한 이름을 자동으로 생성해 주는 옵션이다.</p> </li> <li> <p>styled-components : 스타일을 자바스크립트 파일에 내장시키는 방식으로 스타일을 작성함과 동시에 해당 스타일이 적용된 컴포넌트를 만들 수 있게 해준다.</p> </li> </ul> <p>해당 챕터는 실습 코드만 인용하여 사용하겠음.</p> <p><br /></p> <hr /> <h3 id="91-가장-흔한-방식-일반-css">9.1 가장 흔한 방식, 일반 CSS</h3> <p><br /></p> <p>App.css</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.App</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.App-logo</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40vmin</span><span class="p">;</span>
+  <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">prefers-reduced-motion</span><span class="p">:</span> <span class="n">no-preference</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.App-logo</span> <span class="p">{</span>
+    <span class="nl">animation</span><span class="p">:</span> <span class="n">App-logo-spin</span> <span class="n">infinite</span> <span class="m">20s</span> <span class="n">linear</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.App-header</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#282c34</span><span class="p">;</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">10px</span> <span class="err">+</span> <span class="m">2vmin</span><span class="p">);</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.App-link</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#61dafb</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@keyframes</span> <span class="n">App-logo-spin</span> <span class="p">{</span>
+  <span class="nt">from</span> <span class="p">{</span>
+    <span class="nl">transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">0deg</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nt">to</span> <span class="p">{</span>
+    <span class="nl">transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">360deg</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>해당 파일처럼 <code class="language-plaintext highlighter-rouge">.css</code> 파일을 따로 만들어 <code class="language-plaintext highlighter-rouge">import</code> 하는 방식을 가장 일반적인 방식으로 사용한다. 이때 가장 중요한 점은 CSS 클래스를 중복되지 않게 만드는 것이다. CSS 클래스가 중복되는 것을 방지하는 여러가지 방식이 있는데, 그중 하나는 이름을 지을 때 특별한 규칙을 사용하는 것이고, 또 다른 하나는 CSS Selector를 사용하는 것이다.</p> <p><br /></p> <p><code class="language-plaintext highlighter-rouge">App.css</code> 파일을, 읽어보면 클래스 이름이 컴포넌트 이름-클래스 형태로 지어져 있다. (예시 : <code class="language-plaintext highlighter-rouge">.App-logo</code> ) 클래스 이름에 컴포넌트 이름을 포함시킴으로써 다른 컴포넌트에서 실수로 중복되는 클래스를 만들어 사용하는 것을 방지할 수 있다. 비슷한 방식으로 <a href="http://getbem.com/naming/">BEM 네이밍</a> 방식이 있다.</p> <p><br /></p> <p>CSS Selector를 사용하면 CSS 클래스가 특정 클래스 내부에 있는 경우에만 스타일을 적용할 수 있다.</p> <p>App.js 중 header</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* App 안에 들어 있는 .logo */</span>
+<span class="nc">.App</span> <span class="nc">.logo</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40vmin</span><span class="p">;</span>
+  <span class="nl">animation</span><span class="p">:</span> <span class="n">App-logo-spin</span> <span class="n">infinite</span> <span class="m">20s</span> <span class="n">linear</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* .App 안에 들어 있는 header
+    header 클래스가 아닌 header 태그 자체에
+    스타일을 적용하기 때문에 . 이 생략되었다.
+*/</span>
+<span class="nc">.App</span> <span class="nt">header</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#282c34</span><span class="p">;</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">10px</span> <span class="err">+</span> <span class="m">2vmin</span><span class="p">);</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>이런 식으로 컴포넌트 최상위 html 요소에는 컴포넌트의 이름으로 클래스 이름을 짓고 그 내부에서는 소문자를 입력하거나, <code class="language-plaintext highlighter-rouge">header</code>와 같은 태그를 사용하여 클래스 이름이 불필요한 경우에는 아예 생략 가능하다.</p> <p><br /></p> <hr /> <h3 id="92-sass-사용하기">9.2 Sass 사용하기</h3> <p><br /></p> <p><a href="https://sass-lang.com/"><code class="language-plaintext highlighter-rouge">Sass(Syntactically Awesome Style Sheets)</code></a> 는 CSS 전저치리기로 복잡한 작업을 쉽게 할 수 있도록 해 주고, 스타일 코드의 재활용성을 높여 줄 뿐만 아니라 코드의 가독성을 높여서 유지 보수를 더욱 쉽게 해준다.</p> <p><br /></p> <p>Sass에서는 두 가지 확장자 <code class="language-plaintext highlighter-rouge">.scss</code> 와 <code class="language-plaintext highlighter-rouge">.sass</code> 를 지원한다.</p> <p>.sass</p> <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$front-stack</span> <span class="p">:</span> <span class="n">Helvetiac</span><span class="o">,</span> <span class="nb">sans-serif</span>
+<span class="nv">$primary-color</span> <span class="o">:</span> <span class="mh">#333</span>
+
+<span class="n">body</span>
+    <span class="n">font</span><span class="o">:</span> <span class="m">100%</span> <span class="nv">$font-stack</span>
+    <span class="n">color</span><span class="o">:</span> <span class="nv">$primary-color</span>
+</code></pre></div></div> <p><br /></p> <p>.scss</p> <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$front-stack</span> <span class="p">:</span> <span class="n">Helvetiac</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="nv">$primary-color</span> <span class="p">:</span> <span class="mh">#333</span><span class="p">;</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">font</span><span class="p">:</span> <span class="m">100%</span> <span class="nv">$font-stack</span>
+    <span class="n">color</span><span class="o">:</span> <span class="nv">$primary-color</span>
+<span class="p">}</span>
+
+</code></pre></div></div> <p>주요 차이점은 <code class="language-plaintext highlighter-rouge">.sass</code> 확장자는 중괄호와 세미콜론을 사용하지 않는다. 반면 <code class="language-plaintext highlighter-rouge">.scss</code> 확장자는 기존 <code class="language-plaintext highlighter-rouge">css</code>를 작성하는 방식과 비교해서 문법이 크게 다르지 않다.</p> <p><br /></p> <p>Sass 를 사용하기 위해서는 node-sass 라는 라이브러리를 설치해야 한다.</p> <blockquote> <p>$ yarn add node-sass</p> </blockquote> <p><br /></p> <p>SassComponent.scss</p> <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 변수 사용하기</span>
+<span class="nv">$red</span><span class="p">:</span> <span class="mh">#fa5252</span><span class="p">;</span>
+<span class="nv">$orange</span><span class="p">:</span> <span class="mh">#fd7e14</span><span class="p">;</span>
+<span class="nv">$yellow</span><span class="p">:</span> <span class="mh">#fcc419</span><span class="p">;</span>
+<span class="nv">$green</span><span class="p">:</span> <span class="mh">#40c057</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="p">:</span> <span class="mh">#339af0</span><span class="p">;</span>
+<span class="nv">$indigo</span><span class="p">:</span> <span class="mh">#5c7cfa</span><span class="p">;</span>
+<span class="nv">$violet</span><span class="p">:</span> <span class="mh">#7950f2</span><span class="p">;</span>
+<span class="c1">// mixin 만들기 (재사용되는 스타일 블록을 함수처럼 사용 할 수 있음)</span>
+<span class="k">@mixin</span> <span class="nf">square</span><span class="p">(</span><span class="nv">$size</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$calculated</span><span class="p">:</span> <span class="m">32px</span> <span class="o">*</span> <span class="nv">$size</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nv">$calculated</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nv">$calculated</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.SassComponent</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nc">.box</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="c1">// 일반 CSS 에선 .SassComponent .box 와 마찬가지</span>
+    <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+    <span class="nl">transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">0</span><span class="mi">.3s</span> <span class="n">ease-in</span><span class="p">;</span>
+    <span class="k">&amp;</span><span class="nc">.red</span> <span class="p">{</span>
+      <span class="c1">// .red 클래스가 .box 와 함께 사용 됐을 때</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="nv">$red</span><span class="p">;</span>
+      <span class="k">@include</span> <span class="nd">square</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nc">.orange</span> <span class="p">{</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="nv">$orange</span><span class="p">;</span>
+      <span class="k">@include</span> <span class="nd">square</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nc">.yellow</span> <span class="p">{</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="nv">$yellow</span><span class="p">;</span>
+      <span class="k">@include</span> <span class="nd">square</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nc">.green</span> <span class="p">{</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="nv">$green</span><span class="p">;</span>
+      <span class="k">@include</span> <span class="nd">square</span><span class="p">(</span><span class="m">4</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nc">.blue</span> <span class="p">{</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="nv">$blue</span><span class="p">;</span>
+      <span class="k">@include</span> <span class="nd">square</span><span class="p">(</span><span class="m">5</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nc">.indigo</span> <span class="p">{</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="nv">$indigo</span><span class="p">;</span>
+      <span class="k">@include</span> <span class="nd">square</span><span class="p">(</span><span class="m">6</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nc">.violet</span> <span class="p">{</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="nv">$violet</span><span class="p">;</span>
+      <span class="k">@include</span> <span class="nd">square</span><span class="p">(</span><span class="m">7</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+      <span class="c1">// .box 에 마우스 올렸을 때</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div> <p><br /></p> <p>SassComponent.js</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./SassComponent.scss</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">SassComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">SassComponent</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">box red</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">box orange</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">box yellow</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">box green</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">box blue</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">box indigo</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">box violet</span><span class="dl">"</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">SassComponent</span><span class="p">;</span>
+</code></pre></div></div> <p><br /></p> <p>App.js</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">SassComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./SassComponent</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">SassComponent</span> <span class="o">/&gt;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div> <p><br /></p> <p>여러 파일에서 사용될 수 있는 Sass 변수 및 믹스인은 다른 파일로 따로 분리하여 작성한 뒤 필요한 곳에서 쉽게 불러와 사용 가능하다.</p> <p>styles/utils.scss</p> <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 변수 사용하기</span>
+<span class="nv">$red</span><span class="p">:</span> <span class="mh">#fa5252</span><span class="p">;</span>
+<span class="nv">$orange</span><span class="p">:</span> <span class="mh">#fd7e14</span><span class="p">;</span>
+<span class="nv">$yellow</span><span class="p">:</span> <span class="mh">#fcc419</span><span class="p">;</span>
+<span class="nv">$green</span><span class="p">:</span> <span class="mh">#40c057</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="p">:</span> <span class="mh">#339af0</span><span class="p">;</span>
+<span class="nv">$indigo</span><span class="p">:</span> <span class="mh">#5c7cfa</span><span class="p">;</span>
+<span class="nv">$violet</span><span class="p">:</span> <span class="mh">#7950f2</span><span class="p">;</span>
+<span class="c1">// mixin 만들기 (재사용되는 스타일 블록을 함수처럼 사용 할 수 있음)</span>
+<span class="k">@mixin</span> <span class="nf">square</span><span class="p">(</span><span class="nv">$size</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$calculated</span><span class="p">:</span> <span class="m">32px</span> <span class="o">*</span> <span class="nv">$size</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nv">$calculated</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nv">$calculated</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p><code class="language-plaintext highlighter-rouge">@import './styles/utils.scss';</code> 를 통해서 <code class="language-plaintext highlighter-rouge">SassComponent.scss</code> 파일에 <code class="language-plaintext highlighter-rouge">import</code> 해주도록 한다.</p> <p><br /></p> <p>Sass 를 사용할 때 방금과 같이 utils를 불러오는 작업에서 <code class="language-plaintext highlighter-rouge">@import</code> 를 통해서 가져오는데, 경로가 길어진다는 단점이 있다. 이를 해결하는 방법은 Webpack에서 Sass를 처리하는 sass-loader의 설정을 커스터마이징 하는 것이다.</p> <p><br /></p> <p><code class="language-plaintext highlighter-rouge">CRA(create-react-app)</code>은 프로젝트의 구조의 복잡도를 낮추기 위해 세부 설정들이 숨어있는데 이를 커스터마이징 하기 위해서는 <code class="language-plaintext highlighter-rouge">yarn eject</code> 가 필요하다. <code class="language-plaintext highlighter-rouge">yarn eject</code>는 git에 커밋되지 않은 변화가 있으면 진행되지 않기 때문에 먼저 커밋 해줘야 한다.</p> <p><br /></p><pre><code class="language-bsh">$ yarn eject
+yarn run v1.12.0
+warning ../package.json: No license field
+$ react-scripts eject
+? Are you sure you want to eject? This action is permanent. (y/N) y
+</code></pre><p><br /></p> <p>그 후에 <code class="language-plaintext highlighter-rouge">config</code>라는 디렉터리의 <code class="language-plaintext highlighter-rouge">webpack.config.js</code>를 열고 <code class="language-plaintext highlighter-rouge">sassRegex</code>라는 키워드를 찾아서 다음과 같이 수정한다.</p> <p>webpack.config.js - sassRegex</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="p">{</span>
+              <span class="nl">test</span><span class="p">:</span> <span class="nx">sassRegex</span><span class="p">,</span>
+              <span class="nx">exclude</span><span class="p">:</span> <span class="nx">sassModuleRegex</span><span class="p">,</span>
+              <span class="nx">use</span><span class="p">:</span> <span class="nx">getStyleLoaders</span><span class="p">({</span>
+                <span class="na">importLoaders</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="na">sourceMap</span><span class="p">:</span> <span class="nx">isEnvProduction</span> <span class="o">&amp;&amp;</span> <span class="nx">shouldUseSourceMap</span>
+              <span class="p">}).</span><span class="nx">concat</span><span class="p">({</span>
+                <span class="na">loader</span><span class="p">:</span> <span class="nx">require</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="dl">'</span><span class="s1">sass-loader</span><span class="dl">'</span><span class="p">),</span>
+                <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="na">includePaths</span><span class="p">:</span> <span class="p">[</span><span class="nx">paths</span><span class="p">.</span><span class="nx">appSrc</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/styles</span><span class="dl">'</span><span class="p">],</span>
+                  <span class="na">sourceMap</span><span class="p">:</span> <span class="nx">isEnvProduction</span> <span class="o">&amp;&amp;</span> <span class="nx">shouldUseSourceMap</span>
+                <span class="p">}</span>
+              <span class="p">}),</span>
+              <span class="nx">sideEffects</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+</code></pre></div></div> <p>이렇게 설정하면 <code class="language-plaintext highlighter-rouge">utils.scss</code> 파일을 불러올 때 현재 수정하고 있는 scss 파일 경로가 어디에 위치하더라도 앞부분에 상대 경로를 입력할 필요 없이 styles 디렉터리 기준 절대 경로를 사용하여 불러올 수 있다.</p> <p><br /></p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="p">{</span>
+              <span class="nl">test</span><span class="p">:</span> <span class="nx">sassRegex</span><span class="p">,</span>
+              <span class="nx">exclude</span><span class="p">:</span> <span class="nx">sassModuleRegex</span><span class="p">,</span>
+              <span class="nx">use</span><span class="p">:</span> <span class="nx">getStyleLoaders</span><span class="p">({</span>
+                <span class="na">importLoaders</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="na">sourceMap</span><span class="p">:</span> <span class="nx">isEnvProduction</span> <span class="o">&amp;&amp;</span> <span class="nx">shouldUseSourceMap</span>
+              <span class="p">}).</span><span class="nx">concat</span><span class="p">({</span>
+                <span class="na">loader</span><span class="p">:</span> <span class="nx">require</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="dl">'</span><span class="s1">sass-loader</span><span class="dl">'</span><span class="p">),</span>
+                <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="na">includePaths</span><span class="p">:</span> <span class="p">[</span><span class="nx">paths</span><span class="p">.</span><span class="nx">appSrc</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/styles</span><span class="dl">'</span><span class="p">],</span>
+                  <span class="na">sourceMap</span><span class="p">:</span> <span class="nx">isEnvProduction</span> <span class="o">&amp;&amp;</span> <span class="nx">shouldUseSourceMap</span><span class="p">,</span>
+                  <span class="na">data</span><span class="p">:</span> <span class="s2">`@import 'utils';`</span>
+                <span class="p">}</span>
+              <span class="p">}),</span>
+              <span class="nx">sideEffects</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+</code></pre></div></div> <blockquote> <p>data: <code class="language-plaintext highlighter-rouge">@import 'utils';</code></p> </blockquote> <p>위의 코드를 통해서 기본적으로 import를 하도록 설정할 수 있다.</p> <p><br /></p> <p>Sass의 장점 중 하나는 라이브러리를 쉽게 불러와서 사용할 수 있다는 점이다. yarn을 통해 설치한 라이브러리를 사용하는 가장 기본적인 방법은 상대 경로를 사용하여 node_modules까지 들어가서 불러오는 방법이다.</p> <blockquote> <p>@import ‘../../../node_modules/library/styles’;</p> </blockquote> <p><br /></p> <p>디렉토리의 경로를 표시하는 것은 번거로운 일이므로 물결 문자를 통해서 해결 가능하다. 물결 문자를 사용하면 자동으로 node_modules에서 라이브러리 디렉터리를 탐지하여 스타일을 불러올 수 있다.</p> <blockquote> <p>@import ‘~library/styles’;</p> </blockquote> <p><br /></p> <hr /> <h3 id="93-css-module">9.3 CSS Module</h3> <p>CSS Module은 CSS를 불러와서 사용할 때 클래스 이름을 고유한 값, 즉 <code class="language-plaintext highlighter-rouge">[파일이름]_[클래스 이름]__[해시값]</code> 형태로 자동으로 만들어서 컴포넌트 스타일 클래스 이름이 중첩되는 현상을 방지해 주는 기술이다. <code class="language-plaintext highlighter-rouge">.module.css</code> 확장자로 파일을 저장하면 CSS Module이 적용된다.</p> <p>CSSModule.module.css</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* 자동으로 고유해질 것이므로 흔히 사용되는 단어를 클래스 이름으로 마음대로 사용가능*/</span>
+
+<span class="nc">.wrapper</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 글로벌 CSS 를 작성하고 싶다면 */</span>
+
+<span class="nd">:global</span> <span class="nc">.something</span> <span class="p">{</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">800</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">aqua</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>CSSModule.js</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">styles</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./CSSModule.module.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CSSModule</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">wrapper</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="nx">안녕하세요</span><span class="p">,</span> <span class="nx">저는</span> <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">something</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">CSS</span> <span class="nx">Module</span><span class="o">!&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div> <p>CSS Module을 사용한 클래스 이름을 두 개 이상 적용할 때는 다음과 같이 코드를 작성하면 된다.</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">styles</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./CSSModule.module.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">CSSModule</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s2">`</span><span class="p">${</span><span class="nx">styles</span><span class="p">.</span><span class="nx">wrapper</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">styles</span><span class="p">.</span><span class="nx">inverted</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="nx">안녕하세요</span><span class="p">,</span> <span class="nx">저는</span> <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">something</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">CSS</span> <span class="nx">Module</span><span class="o">!&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">CSSModule</span><span class="p">;</span>
+</code></pre></div></div> <p>위 코드는 ES6 문법 템플릿 리터럴을 사용하여 문자열을 합해 준 것이다.</p> <p><br /></p> <hr /> <h3 id="94-styled-components">9.4 styled-components</h3> <p><br /></p> <p>컴포넌트 스타일링의 또 다른 패러다임은 자바스크립트 파일 안에 스타일을 선언하는 방식이다. 이 방식을 <code class="language-plaintext highlighter-rouge">'CSS-in-JS'</code> 라고 한다. 관련된 라이브러리가 많지만 이중 가장 선호하는 <code class="language-plaintext highlighter-rouge">styled-componens</code> 에 대해서 알아보도록 하겠다.</p> <p><br /></p> <p>해당 패키지를 yarn을 통해서 설치해 준다.</p><pre><code class="language-bsh">$ yarn add styled-components
+</code></pre><p><br /></p> <p>StyledComponents.js</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">styled</span><span class="p">,</span> <span class="p">{</span> <span class="nx">css</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Box</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
+  /* props 로 넣어준 값을 직접 전달해줄 수 있다. */
+  background: </span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">color</span> <span class="o">||</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span><span class="p">}</span><span class="s2">;
+  padding: 1rem;
+  display: flex;
+`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Button</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">button</span><span class="s2">`
+  background: white;
+  color: black;
+  border-radius: 4px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 600;
+
+  /* &amp; 문자를 사용하여 Sass 처럼 자기 자신 선택 가능 */
+  &amp;:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  /* 다음 코드는 inverted 값이 true 일 때 특정 스타일을 부여해준다. */
+  </span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="nx">props</span><span class="p">.</span><span class="nx">inverted</span> <span class="o">&amp;&amp;</span>
+    <span class="nx">css</span><span class="s2">`
+      background: none;
+      border: 2px solid white;
+      color: white;
+      &amp;:hover {
+        background: white;
+        color: black;
+      }
+    `</span><span class="p">}</span><span class="s2">;
+  &amp; + button {
+    margin-left: 1rem;
+  }
+`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">StyledComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">Box</span> <span class="nx">color</span><span class="o">=</span><span class="dl">"</span><span class="s2">black</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Button</span><span class="o">&gt;</span><span class="nx">안녕하세요</span><span class="o">&lt;</span><span class="sr">/Button</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Button</span> <span class="nx">inverted</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">테두리만</span><span class="o">&lt;</span><span class="sr">/Button</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/Box</span><span class="err">&gt;
+</span><span class="p">);</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">StyledComponent</span><span class="p">;</span>
+</code></pre></div></div> <p>styled-components와 일반 className을 사용하는 CSS/Sass를 비교했을 때, 가장 큰 장점은 props 값으로 전달해 주는 값을 쉽게 스타일에 적용할 수 있다는 것이다.</p> <ul> <li>VS code를 사용할 때 styled-components를 위해 컴포넌트 내부에 작성한 스타일이 문자열로 간주되어 하이라이팅이 제대로 이루어지지 않는데 이는 vscode-styled-components extension을 설치하여 해결 가능하다.</li> </ul> <p><br /></p> <p>styled-compoents는 <code class="language-plaintext highlighter-rouge">Tagged 템플릿 리터럴</code>을 사용하는데 템플릿 안에 자바스크립트 객체나 함수를 전달할 때 온전히 추출할 수 있는 기능이다. 이를 통해서 styled-components로 만든 컴포넌트의 props를 스타일 쪽에서 쉽게 조회할 수 있도록 해준다.</p> <h3 id="tagged-템플릿-리터럴-설명-바로가기-mdn"><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals">Tagged 템플릿 리터럴 설명 바로가기 MDN</a></h3> <p><br /> <br /></p> <p>props에 따른 조건부 스타일링을 할때는 아래 코드 예시와 같이 진행한다.</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">styled</span><span class="p">,</span> <span class="p">{</span> <span class="nx">css</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+<span class="cm">/* 단순 변수의 형태가 아니라 여러줄의 스타일 구문을 조건부로 설정해야 하는 경우엔 css 를 불러와야 한다..
+ */</span>
+<span class="kd">const</span> <span class="nx">Button</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">button</span><span class="s2">`
+  background: white;
+  color: black;
+  border-radius: 4px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 600;
+
+  /* &amp; 문자를 사용하여 Sass 처럼 자기 자신 선택 가능 */
+  &amp;:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  /* 다음 코드는 inverted 값이 true 일 때 특정 스타일을 부여해준다. */
+  </span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="nx">props</span><span class="p">.</span><span class="nx">inverted</span> <span class="o">&amp;&amp;</span>
+    <span class="nx">css</span><span class="s2">`
+      background: none;
+      border: 2px solid white;
+      color: white;
+      &amp;:hover {
+        background: white;
+        color: black;
+      }
+    `</span><span class="p">}</span><span class="s2">;
+  &amp; + button {
+    margin-left: 1rem;
+  }
+`</span><span class="p">;</span>
+</code></pre></div></div> <p>스타일 코드 여러 줄을 props에 따라 넣어 주어야 할 때는 CSS Styled-components에서 불러와야 한다.</p> <p><br /> <br /></p> <p>반응형 디자인을 하는데 있어서는 일반 CSS랑 큰 차이가 없다. 하지만 이런 작업을 여러 컴포넌트에서 반복한다면 귀찮을 수 있기 때문에 styled-components 메뉴얼에서 제공하는 유틸 함수의 예시를 살펴보도록 하겠다.</p> <p>예시</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">styled</span><span class="p">,</span> <span class="p">{</span> <span class="nx">css</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">sizes</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">desktop</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span>
+  <span class="na">tablet</span><span class="p">:</span> <span class="mi">768</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// 위에있는 size 객체에 따라 자동으로 media 쿼리 함수를 만들어 준다..</span>
+<span class="c1">// 참고: https://www.styled-components.com/docs/advanced#media-templates</span>
+
+<span class="kd">const</span> <span class="nx">media</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">sizes</span><span class="p">).</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">label</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">acc</span><span class="p">[</span><span class="nx">label</span><span class="p">]</span> <span class="o">=</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">css</span><span class="s2">`
+    @media (max-width: </span><span class="p">${</span><span class="nx">sizes</span><span class="p">[</span><span class="nx">label</span><span class="p">]</span> <span class="o">/</span> <span class="mi">16</span><span class="p">}</span><span class="s2">em) {
+      </span><span class="p">${</span><span class="nx">css</span><span class="p">(...</span><span class="nx">args</span><span class="p">)}</span><span class="s2">;
+    }
+  `</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">acc</span><span class="p">;</span>
+<span class="p">},</span> <span class="p">{});</span>
+
+<span class="kd">const</span> <span class="nx">Box</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
+  /* props 로 넣어준 값을 직접 전달해줄 수 있다. */
+  background: </span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">color</span> <span class="o">||</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span><span class="p">}</span><span class="s2">;
+  padding: 1rem;
+  display: flex;
+  width: 1024px;
+  margin: 0 auto;
+  </span><span class="p">${</span><span class="nx">media</span><span class="p">.</span><span class="nx">desktop</span><span class="s2">`width: 768px;`</span><span class="p">}</span><span class="s2">
+  </span><span class="p">${</span><span class="nx">media</span><span class="p">.</span><span class="nx">tablet</span><span class="s2">`width: 768px;`</span><span class="p">}</span><span class="s2">;
+`</span><span class="p">;</span>
+</code></pre></div></div> <br /><!-- Load Facebook SDK for JavaScript --> <div id="fb-root"></div> <script> (function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0'; fjs.parentNode.insertBefore(js, fjs); })(document, 'script', 'facebook-jssdk'); </script> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" ></script> <!-- <div class="share-page"> <p class="share-text">Share this on &rarr;</p> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="false" style="margin-top:5px;" >Tweet</a > <a class="fb-share-button" data-href="https://dudwns9331.github.io/react/2021/07/03/react9/" data-size="large" data-layout="button" >Share</a> </div> --> <!-- Author box --> <div class="card"> <div class="card-header"> About YeongJun </div> <div class="card-body"> <div class="row"> <div class="col-md-4"> <img class="author-profile-img" src="https://dudwns9331.github.io/assets/img/authors/yeongjun.png" alt="YeongJun" /> </div> <div class="col-md-6"> <p class="author_bio">Hi I am YeongJun, a Web Developer and Designer.</p> <p>Email : dudwns1045@naver.com</p> <p>Website : http://gitbub.com/dudwns9331</p> <p class="profile-links"> <a class="social-link" href="https://github.com/dudwns9331" target="_blank"><i class="fab fa-github fa-fw"></i></a> <a class="social-link" href="https://instagram.com/ahn0_jun" target="_blank"><i class="fab fa-instagram fa-fw"></i></a> </p> </div> </div> </div> </div> </div> <!--<div class="comments"><script> var disqus_config = function () { this.page.url = "https://dudwns9331.github.io/react/2021/07/03/react9/"; /* Replace PAGE_URL with your page's canonical URL variable */ this.page.identifier = "/react/2021/07/03/react9"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */ }; (function () { /* DON'T EDIT BELOW THIS LINE */ var d = document, s = d.createElement("script"); s.src = "https://https-dudwns9331-github-io.disqus.com/embed.js"; s.setAttribute("data-timestamp", +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript >Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a> </noscript> </div>--> <!-- 댓글인데 지저분한 광고로 인해서 내림 --> <!-- <div id="disqus_thread"></div> --> </article> <script> var disqus_config = function () { this.page.url = "https://dudwns9331.github.io/react/2021/07/03/react9/"; /* Replace PAGE_URL with your page's canonical URL variable */ this.page.identifier = "/react/2021/07/03/react9"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */ }; (function () { /* DON'T EDIT BELOW THIS LINE */ var d = document, s = d.createElement("script"); s.src = "https://https-dudwns9331-github-io.disqus.com/embed.js"; s.setAttribute("data-timestamp", +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript >Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a> </noscript> </div> </div> <div class="row"> <div class="col-md-4"> <div class="card"> <div class="card-header">About yeongjun</div> <div class="card-body"> <p class="author_bio">강원대학교 컴퓨터공학과 컴퓨터과학전공 R.O.T.C 60th 127 학군단, 프론트엔드 개발 준비중 :D</p><!-- Place this tag where you want the github button to render. <a class="github-button" href="https://github.com/sujaykundu777/devlopr-jekyll" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star sujaykundu777/devlopr-jekyll on GitHub" >Star</a > --> </div> </div> </div> <div class="col-md-4"> <div class="card"> <div class="card-header">Categories</div> <div class="card-body text-dark"> <div id="#React"></div> <li class="tag-head"> <a href="/blog/categories/React">React</a> </li> <a name="React"></a> </div> </div> </div> <div class="col-md-4"> <div class="card"> <div class="card-header">Useful Links</div> <div class="card-body text-dark"> <li> <a href="https://dudwns9331.github.io/">Home</a> </li> <li> <a href="https://dudwns9331.github.io/about">About</a> </li> <li> <a href="https://dudwns9331.github.io/blog">Blog</a> </li> </div> </div> </div> </div> </div> <div class="col-lg-12" id="newsletter_footer"><!-- Mailchimp Newletters <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate > <div id="mc_embed_signup_scroll_footer"> <label for="mce-EMAIL_footer"> Signup for Weekly Email Newsletters :D</label > <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL_footer" placeholder="email address" required /> real people should not fill this in and expect good things - do not remove this or risk form bot signups <div style="position: absolute; left: -5000px" aria-hidden="true"> <input type="text" name="b_50bab1c85eae24ecfb0f68361_3a2dd721d0" tabindex="-1" value="" /> </div> <br /> <div class="clear"> <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe_footer" class="btn btn-lg btn-success" /> </div> </div> </form> --> </div><footer> <p> Powered by<a href="https://github.com/sujaykundu777/devlopr-jekyll"> devlopr jekyll</a>.Hosted at <a href="https://pages.github.com">Github</a>. Subscribe via <a href=" /feed.xml ">RSS</a> </p> </footer> <script> var options = { classname: 'progressline', id: 'my-id' }; var nanobar = new Nanobar( options ); nanobar.go( 30 ); nanobar.go( 76 ); nanobar.go(100); </script> <div hidden id="snipcart" data-api-key="Y2I1NTAyNWYtMTNkMy00ODg0LWE4NDItNTZhYzUxNzJkZTI5NjM3MDI4NTUzNzYyMjQ4NzU0"></div> <script src="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.js" defer></script> <script src="https://dudwns9331.github.io/assets/js/mode-switcher.js"></script> <script> if (window.netlifyIdentity) { window.netlifyIdentity.on("init", user => { if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); } }); } </script> <!-- olvy releases --> <script> var OlvyConfig = { organisation: "devlopr", target: "#olvy-target", type: "sidebar", view: { showSearch: true, compact: true, showHeader: true, /* only applies when widget type is embed. you cannot hide header for modal and sidebar widgets */ showUnreadIndicator: true, unreadIndicatorColor: "#FFA13AFF", unreadIndicatorPosition: "top-right" } }; </script> <script type="text/javascript" src="https://app.olvy.co/script.js" defer="defer"></script> </body> </html>
